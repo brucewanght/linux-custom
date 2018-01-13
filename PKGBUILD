@@ -5,9 +5,8 @@
 # Maintainer: Tobias Powalowski <tpowa@archlinux.org>
 # Maintainer: Thomas Baechler <thomas@archlinux.org>
 
-pkgbase=linux-lightnvm               # Build stock -ARCH kernel
-#pkgbase=linux-custom       # Build kernel with a different name
-_srcname=linux 
+pkgbase=linux-lightnvm      # Build stock -ARCH kernel base version
+_srcname=linux-custom-ocssd # source directory name, should be the same as your git directory
 pkgver=4.14.0.rc2
 pkgrel=1
 arch=('x86_64')

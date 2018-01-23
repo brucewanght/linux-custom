@@ -70,9 +70,13 @@ prepare() {
 }
 
 build() {
+  #get the number of logical processor
+  job=$(cat /proc/cpuinfo| grep "processor"| wc -l)
+  
   cd "${srcdir}/${_srcname}"
 
-  make -j32 ${MAKEFLAGS} LOCALVERSION= bzImage modules
+  #use all logical processors to make
+  make -j$job ${MAKEFLAGS} LOCALVERSION= bzImage modules
 }
 
 _package() {

@@ -5,8 +5,8 @@
 # Maintainer: Tobias Powalowski <tpowa@archlinux.org>
 # Maintainer: Thomas Baechler <thomas@archlinux.org>
 
-pkgbase=linux-lightnvm      # Build stock -ARCH kernel base version
-_srcname=linux-custom-ocssd # source directory name, should be the same as your git directory
+pkgbase=linux-lightnvm  # Build stock -ARCH kernel base version
+_srcname=linux-lightnvm # source directory name, should be the same as your git directory
 pkgver=4.14.0.rc2
 pkgrel=1
 arch=('x86_64')
@@ -14,8 +14,7 @@ url="https://www.kernel.org/"
 license=('GPL2')
 makedepends=('kmod' 'inetutils' 'bc' 'libelf')
 options=('!strip')
-source=("git+https://github.com/OpenChannelSSD/linux.git#branch=pblk.cnex"
-        #"https://www.kernel.org/pub/linux/kernel/v4.x/${_srcname}.tar.sign"
+source=("git+https://brucewanght@bitbucket.org/brucewanght/linux-lightnvm.git#branch=pblk-cache"
         # the main kernel config files
         'config.x86_64'
         # pacman hook for initramfs regeneration
